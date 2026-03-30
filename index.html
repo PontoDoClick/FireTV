@@ -11,6 +11,28 @@
   gtag('config', 'AW-18031923005');
 </script>
 
+<!-- Event snippet for Compra conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18031923005/qbDfCK_Ay40cEL2epZZD',
+      'value': 1.0,
+      'currency': 'BRL',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fire TV .DoClick</title>
@@ -29,13 +51,18 @@
     <h2>🔥 Transforme sua TV em uma central de entretenimento completa</h2>
     <p>Cansado de uma TV limitada, lenta ou sem os aplicativos que você quer?
     Com o Fire TV da Amazon, você leva sua experiência para outro nível — de forma simples, rápida e acessível..</p>
-    <a class="btn" href="https://amzn.to/3PNF5Tl" target="_blank" rel="nofollow sponsored">Quero Comprar Agora 🔥</a>
+    <a class="btn" href="https://amzn.to/3PNF5Tl"
+   onclick="return gtag_report_conversion('https://amzn.to/3PNF5Tl');"
+   rel="nofollow sponsored">Quero Comprar Agora 🔥</a>
   </section>
 
   <section class="section">
     <h2>O que você vai encontrar</h2>
     <div class="cards">
-        <a href="https://amzn.to/3PNF5Tl" target="_blank" rel="nofollow sponsored" class="card-link">
+        <a href="https://amzn.to/3PNF5Tl"
+   onclick="return gtag_report_conversion('https://amzn.to/3PNF5Tl');"
+   rel="nofollow sponsored"
+   class="card-link">
         <div class="card">
             <img src="img/appsFireTv.avif" alt="Apps Fire Tv">
             <h3>Tenha Todos os Apps de TV e Esportes em Um Lugar</h3>
@@ -44,7 +71,10 @@
         </a>
       
 
-      <a href="https://amzn.to/3PNF5Tl" target="_blank" rel="nofollow sponsored" class="card-link">
+      <a href="https://amzn.to/3PNF5Tl"
+   onclick="return gtag_report_conversion('https://amzn.to/3PNF5Tl');"
+   rel="nofollow sponsored"
+   class="card-link">
         <div class="card">
             <img src="img/FireTvComAlexa_.jpg" alt="Fire Tv com Alexa">
             <h3>Controle Tudo com Sua Voz com Alexa</h3>
@@ -52,7 +82,10 @@
         </div>
         </a>
 
-      <a href="https://amzn.to/3PNF5Tl" target="_blank" rel="nofollow sponsored" class="card-link">
+      <a href="https://amzn.to/3PNF5Tl"
+   onclick="return gtag_report_conversion('https://amzn.to/3PNF5Tl');"
+   rel="nofollow sponsored"
+   class="card-link">
         <div class="card">
             <img src="img/fireTv.avif" alt="Fire Tv">
             <h3>Leve Seu Entretenimento Para Qualquer Lugar</h3>
@@ -75,7 +108,9 @@ Além disso, ele é compacto, fácil de instalar e começa a funcionar em poucos
   <section class="hero">
     <h2>Pronto para começar?</h2>
     <p>Clique no botão abaixo, veja todos os detalhes do produto e aproveite o desconto.</p>
-    <a class="btn" href="https://amzn.to/3PNF5Tl" target="_blank" rel="nofollow sponsored">Ver Oferta 🔥</a>
+    <a class="btn" href="https://amzn.to/3PNF5Tl"
+   onclick="return gtag_report_conversion('https://amzn.to/3PNF5Tl');"
+   rel="nofollow sponsored">Ver Oferta 🔥</a>
   </section>
 
   <footer>
